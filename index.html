@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffd35a" />
+    <title>Le puzzle surprise !</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="confetti confetti-a"></div><div class="confetti confetti-b"></div><div class="confetti confetti-c"></div>
+      <header class="hero">
+        <span class="eyebrow">UNE SURPRISE EST CACHÉE ICI</span>
+        <h1>Le puzzle<br /><em>magique</em> !</h1>
+        <p>Replace les pièces au bon endroit pour découvrir la surprise.</p>
+      </header>
+
+      <section class="game-card" aria-label="Puzzle anniversaire">
+        <div class="card-topline"><span>MON SUPER PORTRAIT</span><span id="progress">0 / 9 pièces</span></div>
+        <div class="puzzle-layout">
+          <div class="board-wrap">
+            <div id="board" class="board" aria-label="Emplacements du puzzle"></div>
+            <div class="sparkle sparkle-one">✦</div><div class="sparkle sparkle-two">✦</div>
+          </div>
+          <aside class="pieces-panel">
+            <p><strong>À toi de jouer !</strong><br />Glisse chaque pièce sur sa case.</p>
+            <div id="tray" class="tray" aria-label="Pièces à déplacer"></div>
+          </aside>
+        </div>
+      </section>
+
+      <div class="actions">
+        <label class="upload-button" for="photo-input">⌁ Utiliser ma photo</label>
+        <input id="photo-input" type="file" accept="image/*" />
+        <button id="restart" type="button">↻ Mélanger à nouveau</button>
+      </div>
+      <p class="tiny-note">Astuce : choisis la photo reçue pour personnaliser la surprise.</p>
+    </main>
+
+    <div id="celebration" class="celebration" aria-live="polite" aria-hidden="true">
+      <div class="celebration-card">
+        <span class="burst burst-left">✦</span><span class="burst burst-right">✦</span>
+        <p>TA-DAAA !</p><h2>Joyeux<br /><em>anniversaire</em> !</h2>
+        <span class="balloon balloon-one">●</span><span class="balloon balloon-two">●</span>
+        <button id="close-celebration" type="button">Rejouer le puzzle</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
